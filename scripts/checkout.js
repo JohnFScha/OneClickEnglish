@@ -133,7 +133,8 @@ btnEnd.addEventListener("click", ()=> {
       if (result.dismiss === Swal.DismissReason.timer) {
 
         //Ocultamos desde CSS el formulario y mostramos el Recibo
-        checkoutForm.className = "d-none"
+        checkoutForm.remove()
+        total.remove() 
         recibo.className = "animate__animated animate__zoomIn"
 
         //Llenamos el recibo con la informacion del formulario:
