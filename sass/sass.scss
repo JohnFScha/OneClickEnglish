@@ -245,7 +245,7 @@ main {
   section.hidden{
     display: none;
   }
-  
+
   h1.display-5 {
     width: 100%;
     padding-top: 50px;
@@ -320,6 +320,7 @@ main {
   
   /*FORMULARIO*/
   div.row#formDiv{
+    margin: 0;
     padding-top: 25px;
     background-color: #87189d;
     display: flex;
