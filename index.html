@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- META TAGS -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tu academia de inglés online personalizada ahora a tan solo un click. A qué esperas, ¿aprendemos juntos? - OneClickEnglish.">
+  <meta name="keywords" content="english, coaching, classes, academy, español, clases, academia">
+  <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+  
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
+  
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+  <!--ANIMATE.CSS-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./styles.css">
+  
+  <!-- FAVICON -->
+  <link rel="shortcut icon" href="./img/cropped-Logo_ico2-32x32.png" type="image/x-icon">
+  
+  <!-- TITULO -->
+  <title>One Click Academy</title>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="p-3 d-flex justify-content-space-between sticky-top">
+    <!-- LOGO -->
+    <div class="container-fluid">
+      <a href="./index.html" class="d-flex align-items-center text-white text-decoration-none">
+        <img src="./img/one click.png" alt="One Click English" id="oneClick">
+      </a>
+    </div>
+    
+    <div class="container d-flex justify-content-center align-items-center">
+      <h1 class="fs-3 m-0 p-0 text-center">Packages</h1>
+    </div>
+    
+    <!-- BUSQUEDA Y CARRITO -->
+    <div class="container d-flex justify-content-end align-items-center">
+      <form class="p-2" role="search" id="searchForm">
+        <input type="search" class="form-control shadow-none" value="" placeholder="Search courses..." aria-label="Search" id="searchBar">
+      </form>
+      <button type="button" class="btn btn-outline-light h-auto" data-bs-toggle="offcanvas" data-bs-target="#cart" aria-expanded="false"
+      aria-controls="#cartOffcanvas"><i class="bi bi-cart"></i></button>
+      <small class="rounded-pill" id="quantity">0</small>
+      <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1" aria-labelledby="cartOffcanvas" id="cart">
+        <div class="offcanvas-header d-flex flex-column">
+          <div class="container d-flex flex-row flex-nowrap justify-content-between align-items-center">
+            <h5 class="offcanvas-title" id="cartOffcanvas">Your cart:</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <ul class="nav nav-tabs d-flex justify-content-around align-items-center flex-nowrap mt-3">
+            <li class="nav-item m-3 fs-5">Id</li>
+            <li class="nav-item m-3 fs-5">Duration</li>
+            <li class="nav-item m-3 fs-5">Price</li>
+            <li class="nav-item m-3 fs-5">Quantity</li>
+          </ul>
+        </div>
+        <div class="offcanvas-body d-flex flex-column justify-content-between">
+          <div class="container justify-self-start" id="cartList">
+          </div>
+          <div class="container d-flex justify-content-between">
+            <a href="#" id="checkout-btn"><button type="button" class="btn btn-outline-light">Checkout</button></a>
+            <button type="button" class="btn btn-outline-light" id="delete">Delete Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <!--CATALOGO-->
+  <main id="main">
+    
+    <section id="dark">
+      <!--COINCIDENCIAS-->
+      <h1 class="text-center display-5 p-1" id="searchTitle">Search Results:</h1>
+      <div class="container d-flex flex-row flex-nowrap justify-content-center mb-5" id="coincidencia"></div>
+    </section>
+    
+    <section id="courses">
+      <!-- CLASES INDIVIDUALES -->
+      <h1 class="text-center display-5 pt-0 animate__animated animate__bounceInLeft">Individual Classes</h1>
+      
+      <!--LISTA-->
+      <div class="row row-cols-1 row-cols-md-3 g-4 mx-1" id="coursesInd"></div>
+      
+      <!-- CLASES INTENSIVAS -->
+      <h1 class="text-center display-5 m-auto animate__animated animate__bounceInLeft" id="firstHeader">Intensive Classes</h1>
+    
+      <!--LISTA-->
+      <div class="row row-cols-1 row-cols-md-3 g-4 mx-1" id="coursesSp"></div>
+      
+      <!--CURSOS DE COACHING-->
+      <h1 class="text-center display-5 m-auto animate__animated animate__bounceInLeft">Coaching Programs</h1>
+      
+      <!--LISTA-->
+      <div class="row row-cols-1 row-cols-md-3 g-4 mx-1 mb-5" id="coursesCh"></div>
+    </section>
+
+  
+  <!--FORMULARIO DE CONTACTO:-->
+  <div class="row" id="formDiv">
+    <div class="col col-3 animate__animated animate__lightSpeedInLeft">
+      <div class="container">
+        <img src="./img/Icono-formulario.png" alt="form image" id="formImg">
+      </div>
+      <div class="container" id="separator"></div>
+      <div class="container">
+        <div class="container d-flex flex-row justify-content-center" id="background">
+          <a href="https://api.whatsapp.com/send/?phone=34636213876&text=Hola%21%21+Querr%C3%ADa+informaci%C3%B3n+sobre...&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer"><i class="animate__animated animate__wobble bi bi-phone"></i></a>
+        </div>
+        <h1 class="display-5 text-center">Get in touch!</h1>
+      </div>
+    </div>
+    <div class="col col-7 d-flex flex-column align-items-start animate__animated animate__lightSpeedInRight">
+      <div class="container-fluid m-0" id="info">
+        <p class="fs-5 text-start">Put your enthusiasm, we take care of the rest</p>
+        <h1 class="display-3 text-start">Write to us!</h1>
+        <p class="fs-6 text-start"><i>Open between 9am-8pm</i></p>
+      </div>
+      <form action="" id="form">
+        <div class="row">
+          <div class="col">
+            <input type="text" class="form-control" placeholder="First name:" aria-label="First name" id="first-name">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Last name:" aria-label="Last name" id="last-name">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="City:" aria-label="Last name" id="city">
+          </div>
+        </div>
+        <div class="form-floating">
+          <textarea class="form-control" placeholder="Tell us about you:" id="floatingTextarea" cols="30" rows="40"></textarea>
+        </div>
+        <div class="col">
+          <button type="submit" class="btn btn-outline-light btn-lg" id="createStudent">Submit</button>
+          <button type="button" class="btn btn-outline-light btn-lg" id="deleteStudent">Delete</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  
+  <!-- PIE DE PAGINA -->
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3" id="index-footer">
+    <div class="d-flex justify-content-start align-items-center"> 
+      <img src="./img/cropped-Logo_ico2-192x192.png" class="mx-2" id="oneClickLogo">
+      <span class="mx-2">© 2022 One Click, Inc</span>
+    </div>
+    
+    <ul class="nav justify-content-end list-unstyled d-flex mx-1">
+      <li class="mx-2"><a href="#" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter fs-4"></i></a></li>
+      <li class="mx-2"><a href="https://www.instagram.com/one.clickenglish/" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram fs-4"></i></a></li>
+      <li class="mx-2"><a href="https://www.facebook.com/OneClickEnglish" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook fs-4"></i></a></li>
+    </ul>
+  </footer>
+  
+  <!-- BOOTSTRAP.JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+  <!--LUXON.JS-->
+  <script src="https://cdn.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js"></script>
+
+  <!-- VANILLA.JS -->
+  <script src="./scripts/class&Dom.js"></script>
+  <script src="./scripts/functions.js"></script>
+  <script src="./scripts/main.js"></script>
+
+  <!--SWEET ALERT 2.JS-->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- META TAGS -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tu academia de inglés online personalizada ahora a tan solo un click. A qué esperas, ¿aprendemos juntos? - OneClickEnglish.">
+  <meta name="keywords" content="english, coaching, classes, academy, español, clases, academia">
+  <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+  
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
+
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  
+  <!--ANIMATE.CSS-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../styles.css">
+  
+  <!-- FAVICON -->
+  <link rel="shortcut icon" href="../img/cropped-Logo_ico2-32x32.png" type="image/x-icon">
+
+  <title>OneClick | Checkout</title>
+</head>
+<body class="bg-light">
+
+  <div class="container">
+    <main>
+      <div class="py-5 text-center" id="topS">
+        <a href="../index.html"><img class="d-block mx-auto mb-4" src="../img/one click.png" alt="oneClick"></a> 
+        <h2>Checkout</h2>
+        <p class="lead">Please fill out the form below. We'll be getting in contact.</p>
+      </div>
+
+      <!--FORMULARIO CHECKOUT-->
+      <section id="pre-checkout">
+        <div class="row g-5">
+          <div class="col-md-5 col-lg-4 order-md-last">
+            <div class="container" id="itemize">
+              <h4 class="d-flex justify-content-between align-items-center mb-3">
+                <span>Your cart</span>
+                <span class="badge rounded-pill" id="itemQuantity"></span>
+              </h4>
+              <ul class="list-group mb-3" id="checkoutCart">  
+              </ul>
+              <div class="container d-flex justify-content-between align-items-center" id="total">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7 col-lg-8">
+            <h4 class="mb-3">Billing address</h4>
+            <form>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label for="firstName" class="form-label">First name</label>
+                  <input type="text" class="form-control shadow-none" id="firstName" placeholder="" value="">
+                </div>
+    
+                <div class="col-sm-6">
+                  <label for="lastName" class="form-label">Last name</label>
+                  <input type="text" class="form-control shadow-none" id="lastName" placeholder="" value="">
+                </div>
+    
+                <div class="col-12">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="text" class="form-control shadow-none" id="email" placeholder="you@example.com">
+                </div>
+    
+                <div class="col-sm-6">
+                  <label for="city" class="form-label">City</label>
+                  <input type="text" class="form-control shadow-none" id="city" placeholder="Paris" value="">
+                </div>
+    
+                <div class="col-sm-6">
+                  <label for="address" class="form-label">Address</label>
+                  <input type="text" class="form-control shadow-none" id="address" placeholder="Main St. 123" value="">
+                </div>
+    
+                <div class="col-md-12">
+                  <label for="country" class="form-label">Country</label>
+                  <select class="form-select shadow-none" id="country">
+                    <option value="">Choose...</option>
+                    <option>United States</option>
+                    <option>Spain</option>
+                    <option>Argentina</option>
+                    <option>Italy</option>
+                  </select>
+                </div>
+              </div>
+    
+              <hr class="my-4">
+    
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="same-address">
+                <label class="form-check-label" for="same-address">Shipping address is the same as my billing address</label>
+              </div>
+    
+              <hr class="my-4">
+    
+              <h4 class="mb-3">Payment</h4>
+    
+              <div class="my-3 d-flex flex-row justify-content-around">
+                <div class="form-check">
+                  <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked="">
+                  <label class="form-check-label" for="credit">Credit card</label>
+                </div>
+                <div class="form-check">
+                  <input id="debit" name="paymentMethod" type="radio" class="form-check-input">
+                  <label class="form-check-label" for="debit">Debit card</label>
+                </div>
+                <div class="form-check">
+                  <input id="paypal" name="paymentMethod" type="radio" class="form-check-input">
+                  <label class="form-check-label" for="paypal">PayPal</label>
+                </div>
+              </div>
+    
+              <div class="row gy-3">
+                <div class="col-md-6">
+                  <label for="cc-name" class="form-label">Name on card</label>
+                  <input type="text" class="form-control shadow-none" id="cc-name" placeholder="">
+                  <small class="text-muted">Full name as displayed on card</small>
+                  <div class="invalid-feedback">
+                    Name on card is required
+                  </div>
+                </div>
+    
+                <div class="col-md-6">
+                  <label for="cc-number" class="form-label">Credit card number</label>
+                  <input type="text" class="form-control shadow-none" id="cc-number" placeholder="">
+                  <div class="invalid-feedback">
+                    Credit card number is required
+                  </div>
+                </div>
+    
+                <div class="col-md-3">
+                  <label for="cc-expiration" class="form-label">Expiration</label>
+                  <input type="text" class="form-control shadow-none" id="cc-expiration" placeholder="MM/YY">
+                  <div class="invalid-feedback">
+                    Expiration date required
+                  </div>
+                </div>
+    
+                <div class="col-md-3">
+                  <label for="cc-cvv" class="form-label">CVV</label>
+                  <input type="text" class="form-control shadow-none" id="cc-cvv" placeholder="XXX" >
+                  <div class="invalid-feedback">
+                    Security code required
+                  </div>
+                </div>
+              </div>
+    
+              <hr class="my-4">
+    
+              <button class="w-100 btn btn-primary btn-lg" type="button" id="btnEnd">End purchase</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!--RECIVO-->
+      <section id="receipt" class="d-none">
+        <div class="card">
+          <div class="card-body">
+            <div class="container mb-2 mt-3">
+              <div class="row d-flex align-items-baseline">
+                <div class="col-xl-12">
+                  <img class=" mx-auto mb-4 w-25 float-end" src="../img/one click.png" alt="oneClick">
+                  <p class="my-2">Invoice &gt;&gt; <strong>ID: #123-123</strong></p>
+                </div>
+                <div class="col-xl-12 float-end">
+                  <a class="btn btn-light text-capitalize border-0 ripple-surface-dark" data-mdb-ripple-color="dark"><i class="bi bi-printer-fill"></i> Print</a>
+                  <a class="btn btn-light text-capitalize border-0 ripple-surface-dark" data-mdb-ripple-color="dark"><i class="bi bi-file-earmark-arrow-down-fill"></i> Download</a>
+                </div>
+                <hr>
+              </div>
+  
+                <div class="row">
+                  <div class="col-xl-12 ">
+                    <ul class="list-unstyled">
+                      <li>To: <span id="invoiceName">John Lorem</span></li>
+                      <li id="invoiceCity">Street, City</li>
+                      <li id="invoiceCountry">State, Country</li>
+                    </ul>
+                  </div>
+                  <div class="col-xl-12">
+                    <p class="fw-bold">Invoice</p>
+                    <ul class="list-unstyled">
+                      <li><i class="bi bi-check-circle-fill"></i> <span class="fw-bold">ID:</span>#123-456</li>
+                      <li id="current-time"><i class="bi bi-check-circle-fill"></i> <span class="fw-bold">Creation Date: </span>Jun 23,2021</li>
+                      <li><i class="bi bi-check-circle-fill"></i> <span class="me-1 fw-bold">Status:</span><span class="badge bg-warning fw-bold">
+                          Pending confirmation</span></li>
+                    </ul>
+                  </div>
+                </div>
+  
+                <div class="row my-2 mx-1 justify-content-center">
+                  <table class="table table-striped">
+                    <thead style="background-color:#87189d; color: #ffde59;">
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Qty</th>
+                        <th scope="col">Unit Price</th>
+                        <th scope="col">Discount</th>
+                        <th scope="col">Amount</th>
+                      </tr>
+                    </thead>
+                    <tbody id="resumen">
+                     
+                    </tbody>
+  
+                  </table>
+                </div>
+                <div class="row">
+                  <div class="col-xl-9">
+                    <ul class="list-unstyled">
+                      <li class="text-muted ms-3" id="subtotal"><span class="text-black me-4">SubTotal   </span>$1110</li>
+                      <li class="text-muted ms-3 mt-2" id="tax"><span class="text-black me-4">Tax (15%)   </span>$111</li>
+                    </ul>
+                    <p class="text-black float-start fw-bold"><span class="text-black mx-3">Total Amount</span><span style="font-size: 25px;" id="totalFinal">$1221</span></p>
+                  </div>
+                </div>
+                <hr>
+                <div class="d-flex flex-row justify-content-between mt-2">
+                  <div class="container">
+                    <p class="text-start m-0">Thank you for your purchase!</p>
+                    <p class="text-start m-0">We'll be confirming via e-mail.</p>
+                  </div>
+                  <img src="../img/cropped-Logo_ico2-32x32.png" class="h-auto mw-25" id="oneClickLogo">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+      <p class="mb-1">© 2017-2023 OneClick</p>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Privacy</a></li>
+        <li class="list-inline-item"><a href="#">Terms</a></li>
+        <li class="list-inline-item"><a href="#">Support</a></li>
+      </ul>
+    </footer>
+  </div>
+  
+  <!--BOOTSTRAP.JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+  <!--LUXON.JS-->
+  <script src="https://cdn.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js"></script>
+
+  <!--VAINILLA.JS-->
+  <script src="../scripts/checkout.js"></script>
+  
+  <!--SWEET ALERT.JS-->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>

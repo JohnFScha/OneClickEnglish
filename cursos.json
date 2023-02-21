@@ -1,0 +1,74 @@
+[
+  {
+    "clase": "individual1",
+    "id": "silver",
+    "duration": "1 class",
+    "price": 14,
+    "quantity": 1,
+    "discount": 0   
+  },
+  {
+    "clase": "individual2",
+    "id": "gold",
+    "duration": "4 classs",
+    "price": 56,
+    "quantity": 1,
+    "discount": 0.10
+  },
+  {
+    "clase": "individual3",
+    "id": "platinum",
+    "duration": "10 classes",
+    "price": 140,
+    "quantity": 1,
+    "discount": 0.15
+  },
+  {
+    "clase": "special1",
+    "id": "silver",
+    "duration": "1 month",
+    "price": 112,
+    "quantity": 1,
+    "discount": 0.10
+  },
+  {
+    "clase": "special2",
+    "id": "gold",
+    "duration": "2 months",
+    "price": 224,
+    "quantity": 1,
+    "discount": 0.15
+  },
+  {
+    "clase": "special3",
+    "id": "platinum",
+    "duration": "3 months",
+    "price": 336,
+    "quantity": 1,
+    "discount": 0.20
+  },
+  {
+    "clase": "coaching1",
+    "id": "organizational",
+    "duration": "1 month",
+    "price": 100,
+    "quantity": 1,
+    "discount": 0 
+  },
+  {
+    "clase": "coaching2",
+    "id": "leadership",
+    "duration": "1 month",
+    "price": 115,
+    "quantity": 1,
+    "discount": 0 
+  },
+  {
+    "clase": "coaching3",
+    "id": "onthological",
+    "duration": "1 month",
+    "price": 130,
+    "quantity": 1,
+    "discount": 0.10
+  }
+]

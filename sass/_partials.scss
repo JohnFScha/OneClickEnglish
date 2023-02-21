@@ -1,0 +1,15 @@
+@mixin expand ($transform, $transition) {
+  transform: $transform;
+  transition: $transition;
+}
+
+@mixin input_style {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid white;
+  border-radius: 0;
+  box-shadow: none;
+  background-color: #87189d;
+  color: #ffde59;
+}

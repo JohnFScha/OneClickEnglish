@@ -1,0 +1,430 @@
+@import "animate.css";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(./img/backdrop.png);
+  object-fit: cover;
+}
+
+.animate__animated .animate__bounceIn {
+  --animate-delay: 1.5s;
+  --animate-duration: 1.5s;
+}
+
+/*HEADER*/
+header {
+  font-family: "Raleway", sans-serif;
+  background-color: #87189d;
+}
+header #oneClick {
+  width: calc(150px + 1.5vw);
+  height: auto;
+  transition: 0.5s;
+}
+header #oneClick:hover {
+  transform: scale(120%);
+  transition: 0.5s;
+}
+header h1 {
+  font-weight: 400;
+  color: #ffde59;
+  text-shadow: white 2px 2px 5px;
+  transition: 0.5s;
+}
+header h1:hover {
+  transform: scale(120%);
+  transition: 0.5s;
+}
+header form {
+  display: flex;
+  flex-flow: row nowrap;
+}
+header form input.form-control {
+  background-color: white;
+  color: black;
+}
+header form button.btn {
+  margin-left: 10px;
+  background-color: #87189d;
+  color: #ffde59;
+}
+header button.btn {
+  color: #ffde59;
+  border: 1px solid #ffde59;
+}
+header button.btn:hover {
+  background-color: #ffde59;
+  color: #87189d;
+}
+header small#quantity {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  padding: 5px 8px;
+  background-color: #ffde59;
+  color: #87189d;
+  border: #ffde59 1px solid;
+  border-radius: 15px;
+  font-size: x-small;
+}
+header div.offcanvas {
+  background-color: #323437;
+  color: #ffde59;
+}
+
+/* MAIN */
+main {
+  /*CHECKOUT*/
+  /*CHECKOUT FORM*/
+  /*CURSOS*/
+  /*COINCIDENCIAS*/
+  /*FIN COINCIDENCIAS*/
+  /*FORMULARIO*/
+}
+main #total {
+  height: 40px;
+  border: 1px rgb(212, 209, 209) solid;
+  border-radius: 10px;
+}
+main #total strong {
+  font-size: 20px;
+}
+main div.order-md-last div.container h4 span {
+  font-family: "Poppins", sans-serif;
+  color: #87189d;
+  text-decoration: none;
+}
+main div.order-md-last div.container h4 span.badge.rounded-pill {
+  font-family: "Poppins", sans-serif;
+  background-color: #87189d;
+  padding: 10px;
+  color: #ffde59;
+}
+main div.order-md-last div.container ul.list-group {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+}
+main div.order-md-last div.container ul.list-group li.list-group-item {
+  background-color: #87189d;
+  color: #ffde59;
+}
+main div.order-md-last div.container#total {
+  background-color: #87189d;
+  color: #ffde59;
+}
+main div.py-5 h2 {
+  font-family: "Poppins", sans-serif;
+  color: #87189d;
+  font-size: 50px;
+  text-shadow: #ffde59 2px 2px 5px;
+  transition: 0.5s;
+}
+main div.py-5 h2:hover {
+  transform: scale(110%);
+  transition: 0.5s;
+}
+main div.py-5 p {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  color: #87189d;
+  font-style: italic;
+}
+main div.col-md-7 {
+  padding: 20px;
+  background-color: white;
+  border: #87189d 1px solid;
+  border-radius: 15px;
+  backdrop-filter: opacity(50%);
+  font-family: "Raleway", sans-serif;
+}
+main div.col-md-7 h4.mb-3 {
+  font-weight: 700;
+  font-size: 30px;
+  color: #87189d;
+}
+main div.col-md-7 label.form-label {
+  font-size: 20px;
+  font-weight: 400;
+  color: #87189d;
+  margin: 10px;
+}
+main div.col-md-7 input.form-control {
+  font-size: 20px;
+  background-color: #87189d;
+  color: #ffde59;
+}
+main div.col-md-7 input.form-control::placeholder {
+  color: #ffde59;
+}
+main div.col-md-7 select.form-select {
+  font-size: 20px;
+  background-color: #87189d;
+  color: #ffde59;
+}
+main div.col-md-7 div.form-check {
+  color: #87189d;
+  font-size: 20px;
+  margin: 10px;
+}
+main div.col-md-7 button.btn-primary {
+  background-color: #87189d;
+  font-size: 25px;
+  color: #ffde59;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  border: 1px solid #323437;
+}
+main div.col-md-7 button.btn-primary:hover {
+  background-color: #ffde59;
+  color: #87189d;
+}
+main section#receipt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+main section#receipt div.col-xl-12 {
+  font-family: "Poppins", sans-serif;
+}
+main section#receipt div.row div.col-xl-12 ul.list-unlysted {
+  font-family: "Raleway", sans-serif;
+  color: #87189d;
+}
+main section#receipt div.row div.col-xl-12 ul.list-unlysted {
+  font-family: "Raleway", sans-serif;
+  color: #87189d;
+}
+main section#receipt div.row div.col-xl-12 span.badge {
+  color: #323437;
+}
+main section#receipt div.row div.col-xl-9 {
+  font-family: "Raleway", sans-serif;
+  color: #87189d;
+}
+main section#receipt div.row table {
+  border-radius: 20px;
+}
+main section#receipt div.row table tbody th {
+  font-family: "Raleway", sans-serif;
+  background-color: #ffde59;
+  color: #87189d;
+}
+main section#receipt div.row table tbody td {
+  font-family: "Raleway", sans-serif;
+  background-color: #ffde59;
+  color: #87189d;
+  font-weight: 400;
+}
+main section.hidden {
+  display: none;
+}
+main h1.display-5 {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 75px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+  color: #87189d;
+  text-shadow: #ffde59 2px 2px 5px;
+  transition: 0.5s;
+}
+main h1.display-5:hover {
+  transform: scale(90%);
+  transition: 0.5s;
+}
+main section.dark {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+main div.container.d-flex.flex-row {
+  z-index: 1000;
+  justify-content: center;
+  width: 80%;
+  height: auto;
+  background-color: #ffde59;
+  border-radius: 15px;
+  box-shadow: #323437 2px 2px 10px;
+}
+main div.container.d-flex.flex-row div.card {
+  width: 35%;
+}
+main div.card {
+  width: 80%;
+  margin: auto;
+  background-color: white;
+  border: gray 1.3px solid;
+  color: #87189d;
+  font-size: calc(15px + 10%);
+}
+main div.card div.card-body p.card-text {
+  color: gray;
+}
+main div.card div.card-body h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+main div.card button.btn-outline-primary {
+  width: 75%;
+  margin: 10px;
+  color: #87189d;
+  border: #87189d 1.5px solid;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+main div.card button.btn-outline-primary:hover {
+  background-color: #87189d;
+  color: #ffde59;
+}
+main a.btn {
+  color: #87189d;
+  border: #87189d 1.5px solid;
+}
+main a.btn:hover {
+  background-color: #87189d;
+  color: #ffde59;
+}
+main div.row#formDiv {
+  padding-top: 25px;
+  background-color: #87189d;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+main div.row#formDiv div.col-3 img#formImg {
+  width: 100%;
+  transition: 0.5s;
+}
+main div.row#formDiv div.col-3 img#formImg:hover {
+  transform: scale(110%);
+  transition: 0.5s;
+}
+main div.row#formDiv div.col-7 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main div.row#formDiv div.col-7 div#info {
+  font-family: "Raleway", sans-serif;
+  color: #ffde59;
+}
+main div.row#formDiv div.col-7 div#info h1 {
+  font-weight: 400;
+}
+main div.row#formDiv div.col-7 form#form {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main div.row#formDiv div.col-7 form#form input.form-control {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid white;
+  border-radius: 0;
+  box-shadow: none;
+  background-color: #87189d;
+  color: #ffde59;
+  width: 100%;
+}
+main div.row#formDiv div.col-7 form#form input.form-control::placeholder {
+  color: #ffde59;
+}
+main div.row#formDiv div.col-7 form#form textarea.form-control {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid white;
+  border-radius: 0;
+  box-shadow: none;
+  background-color: #87189d;
+  color: #ffde59;
+  margin-top: 20px;
+}
+main div.row#formDiv div.col-7 form#form textarea.form-control::placeholder {
+  color: #ffde59;
+}
+main div.row#formDiv div.col-7 form#form label[for=floatingTextarea] {
+  margin-left: 10px;
+}
+main div.row#formDiv div.col-7 form#form div.col {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+main div.row#formDiv div.col-7 form#form div.col button.btn-lg {
+  margin-left: 10px;
+  width: 15%;
+  border: 1px solid #ffde59;
+  color: #ffde59;
+}
+main div.row#formDiv div.col-7 form#form div.col button.btn-lg:hover {
+  background-color: #ffde59;
+  color: #87189d;
+  border: 1px solid #87189d;
+}
+main div.row#formDiv div.col-3 {
+  margin: 15px;
+}
+main div.row#formDiv div.col-3 div#background {
+  background-color: #87189d;
+  box-shadow: none;
+}
+main div.row#formDiv div.col-3 div#background a i.bi-phone {
+  font-size: 50px;
+  font-weight: 800;
+  color: #87189d;
+  background-color: #ffde59;
+  border-radius: 50%;
+  padding: 5px 15px;
+  transition: 2s;
+}
+main div.row#formDiv div.col-3 div#background a:hover {
+  animation: wobble;
+  animation-duration: 0.7s;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
+}
+main div.row#formDiv div.col-3 div#separator {
+  height: 100px;
+}
+main div.row#formDiv div.col-3 h1 {
+  color: #ffde59;
+  text-shadow: #323437 2px 2px 5px;
+  font-size: 35px;
+  margin-bottom: 15px;
+  padding: 0;
+}
+
+/* FOOTER */
+footer.d-flex {
+  background-color: #323437;
+  color: #ffde59;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  margin: 0;
+}
+footer.d-flex div #oneClickLogo {
+  width: calc(25px + 5%);
+}
+footer.d-flex div span {
+  font-weight: bold;
+}
+footer.d-flex ul li {
+  transition: 0.5s;
+}
+footer.d-flex ul li a i.bi {
+  color: #ffde59;
+}
+footer.d-flex ul li:hover {
+  transform: scale(130%);
+  transition: 0.5s;
+}
+
+/*# sourceMappingURL=styles.css.map */
