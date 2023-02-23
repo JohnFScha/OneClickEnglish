@@ -215,17 +215,20 @@ function search (cursoBuscado, array) {
       coincidencia.innerHTML = `<h1 class="text-center display-5 m-auto">This product is not in our list</h1>`
       courses.className = "hidden"
       darken.className = "dark animate__animated animate__fadeIn"
+      headImg.className = "d-none"
       coincidencia.className = "container d-flex flex-row flex-nowrap justify-content-center mb-5 animate__animated animate__bounceIn"
     } else if (cursoBuscado.length === 0) {
       coincidencia.innerHTML = ""
       searchHeader.innerText = ""
-      darken.className = ""
+      darken.className = "d-none"
       courses.className = ""
+      headImg.className = "mw-50 shadow-lg"
       coincidencia.className = "container d-flex flex-row flex-nowrap justify-content-center mb-5"
     } else {
       coincidencia.innerHTML = ""
       courses.className = "hidden"
       darken.className = "dark animate__animated animate__fadeIn"
+      headImg.className = "d-none"
       coincidencia.className = "container d-flex flex-row flex-nowrap justify-content-center mb-5 animate__animated animate__bounceIn"
       searchHeader.innerText = "Search Results:"
       coincidencias(busqueda)

@@ -34,7 +34,6 @@ let productosEnCarrito = JSON.parse(localStorage.getItem("carrito"))
 console.log(productosEnCarrito)
 itemizedCart(productosEnCarrito)
 
-
 //SETEAR EL TEXTO A LA CANTIDAD TOTAL DE ITEMS
 quantity.innerText = `${productosEnCarrito.reduce((acc, cant) => acc + cant.quantity, 0)}`
 calcularTotal(productosEnCarrito)
@@ -70,7 +69,6 @@ function calcularTotal (array) {
   }
 }
 
-
 //FUNCION PARA IMPRIMIR EL CARRITO AL RECIBO
 function printReceipt (array) {
   let cant = 1
@@ -90,86 +88,103 @@ function printReceipt (array) {
 //FUNCION PARA CALCULAR TOTAL/SUBTOTAL
 function totalSubtotal (array) {
   let subTotal 
+  //Si hay un solo producto en el carrito, entonces calculamos directamente el descuento sobre el precio y lo multiplicamos por la cantidad.
   if(array.length === 1) {
-    subTotal = (array[0].price * array[0].quantity) * array[0].discount
+    let priceWithDiscount = array[0].price - (array[0].price * array[0].discount) 
+    subTotal =  priceWithDiscount * array[0].quantity
+    console.log(subTotal)
   } else {
-    subTotal = array.reduce((acc, item) => acc + (item.price * item.quantity), 0)
+    //Si hay mas de un producto, usamos reduce() para realizar el mismo calculo que en el caso anterior, pero acumulandolo.
+    subTotal = array.reduce((acc, item) => acc + ((item.price - (item.price * item.discount)) * item.quantity), 0)
   }
   return subTotal
 }
 
 //FINALIZAR COMPRA
 btnEnd.addEventListener("click", ()=> {
-  //Opcion de cerrar el ciclo o no
-  Swal.fire({
-    title: `End purchase?`,
-    showDenyButton: true,
-    showCloseButton: true,
-    color: '#87189d',
-    denyButtonColor: 'gray',
-    confirmButtonColor: '#87189d',
-    confirmButtonText: 'Yes',
-    denyButtonText: `No`,
-  }).then((result) => {
-    //Si confirma, establezco un timeOut() para procesar los datos
-    if (result.isConfirmed) {
-      let timerInterval
-      Swal.fire({
-      title: 'Processing puchase...',
-      timer: 3000,
-      timerProgressBar: true,
-      color: '#87189d',
-      didOpen: () => {
-        Swal.showLoading()
-        timerInterval = setInterval(() => {
-          Swal.getTimerLeft()
-        }, 100)
-      },
-      willClose: () => {
-        clearInterval(timerInterval)
-      }
-    }).then((result) => {
-      //Al finalizar el timeOut() imprimo al HTML el recibo
-      if (result.dismiss === Swal.DismissReason.timer) {
-
-        //Ocultamos desde CSS el formulario y mostramos el Recibo
-        checkoutForm.remove()
-        total.remove() 
-        recibo.className = "animate__animated animate__zoomIn"
-
-        //Llenamos el recibo con la informacion del formulario:
-        nombre.innerText = `${firstName.value + ' ' + lastName.value}`
-        ciudad.innerText = `${address.value + ' ' + city.value}`
-        pais.innerText = `${country.value}`
-        horaActual.innerHTML = `<i class="bi bi-check-circle-fill"></i> <span class="fw-bold">Creation Date: </span>${fechaActual}`
-
-        //Llenamos la tabla con lo que haya en el carrito:
-        printReceipt(productosEnCarrito)
-
-        //Calculamos el subtotal:
-        subtotal.innerHTML = `<span class="text-black me-4">SubTotal   </span>€${totalSubtotal(productosEnCarrito)}`
-
-        //Los impuestos (15% del subtotal)
-        tax.innerHTML = `<span class="text-black me-4">Tax (15%)   </span>€${(totalSubtotal(productosEnCarrito) * 0.15)}`
-
-        //Total final (subtotal + impuestos)
-        totalFinal.innerText = `€${((totalSubtotal(productosEnCarrito) * 0.15) + totalSubtotal(productosEnCarrito)).toFixed(2)}`
-
-        //Finalmente borramos el Carrito y borramos el storage:
-        productosEnCarrito = []
-        localStorage.clear()
-      }
-    }) 
-    //Llevo el vieport de nuevo al top para visualizar el recibo
+  //Chequeamos que no falte informacion para el recibo, en caso de que alguno de los campos esten vacios, se pide que lo llene y se lleva el viewport al top para que lo haga.
+  if(firstName.value == "" || lastName.value == "" || address.value == "" || city.value == "" || country.value == "") {
     window.scrollTo({ top: 200, behavior: 'smooth' })
-    } else if (result.isDenied) {
-      //Si rechaza cerrar el ciclo, anuncio que revise el carrito.
-      Swal.fire({
-        title:`Please check cart!`, 
-        icon: 'info',
-        showConfirmButton: true,
-        confirmButtonColor: '#87189d'
-      })
-    }
-  })
+    Swal.fire ({
+      icon: 'error',
+      title: 'Error',
+      text: 'Info missing.',
+      color: '#87189d'
+    })
+  } else {
+    Swal.fire({
+      title: `End purchase?`,
+      showDenyButton: true,
+      showCloseButton: true,
+      color: '#87189d',
+      denyButtonColor: 'gray',
+      confirmButtonColor: '#87189d',
+      confirmButtonText: 'Yes',
+      denyButtonText: `No`,
+    }).then((result) => {
+      //Si confirma, establezco un timeOut() para procesar los datos
+      if (result.isConfirmed) {
+        let timerInterval
+        Swal.fire({
+        title: 'Processing puchase...',
+        timer: 3000,
+        timerProgressBar: true,
+        color: '#87189d',
+        didOpen: () => {
+          Swal.showLoading()
+          timerInterval = setInterval(() => {
+            Swal.getTimerLeft()
+          }, 100)
+        },
+        willClose: () => {
+          clearInterval(timerInterval)
+        }
+      }).then((result) => {
+        //Al finalizar el timeOut() imprimo al HTML el recibo
+        if (result.dismiss === Swal.DismissReason.timer) {
+  
+          //Ocultamos desde CSS el formulario y mostramos el Recibo
+          checkoutForm.remove()
+          total.remove() 
+          recibo.className = "animate__animated animate__zoomIn"
+  
+          //Llenamos el recibo con la informacion del formulario:
+          nombre.innerText = `${firstName.value + ' ' + lastName.value}`
+          ciudad.innerText = `${address.value + ' ' + city.value}`
+          pais.innerText = `${country.value}`
+          horaActual.innerHTML = `<i class="bi bi-check-circle-fill"></i> <span class="fw-bold">Creation Date: </span>${fechaActual}`
+  
+          //Llenamos la tabla con lo que haya en el carrito:
+          printReceipt(productosEnCarrito)
+  
+          //Calculamos el subtotal:
+          subtotal.innerHTML = `<span class="text-black me-4">SubTotal   </span>€${totalSubtotal(productosEnCarrito)}`
+  
+          //Los impuestos (15% del subtotal)
+          tax.innerHTML = `<span class="text-black me-4">Tax (15%)   </span>€${(totalSubtotal(productosEnCarrito) * 0.15)}`
+  
+          //Total final (subtotal + impuestos)
+          if (productosEnCarrito.length === 1) {
+            totalFinal.innerText = `€`
+          }
+          totalFinal.innerText = `€${((totalSubtotal(productosEnCarrito) * 0.15) + totalSubtotal(productosEnCarrito)).toFixed(2)}`
+  
+          //Finalmente borramos el Carrito y borramos el storage:
+          productosEnCarrito = []
+          localStorage.clear()
+        }
+      }) 
+      //Llevo el vieport de nuevo al top para visualizar el recibo
+      window.scrollTo({ top: 200, behavior: 'smooth' })
+      } else if (result.isDenied) {
+        //Si rechaza cerrar el ciclo, anuncio que revise el carrito.
+        Swal.fire({
+          title:`Please check cart!`, 
+          icon: 'info',
+          showConfirmButton: true,
+          confirmButtonColor: '#87189d'
+        })
+      }
+    })
+  }
 })

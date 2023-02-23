@@ -15,6 +15,7 @@ let checkoutBtn = document.getElementById("checkout-btn")
 let message = document.getElementById("form")
 let deleteMessage = document.getElementById("deleteStudent")
 let darken = document.getElementById("dark")
+let headImg = document.getElementById("headImg")
 
 //FORM
 let firstName = document.getElementById("first-name")

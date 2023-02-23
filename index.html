@@ -12,7 +12,7 @@
   <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@500&family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
   
   <!-- BOOTSTRAP -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -28,7 +28,7 @@
   <link rel="shortcut icon" href="./img/cropped-Logo_ico2-32x32.png" type="image/x-icon">
   
   <!-- TITULO -->
-  <title>One Click Academy</title>
+  <title>OneClick Academy</title>
 </head>
 <body>
   <!-- HEADER -->
@@ -56,7 +56,7 @@
         <div class="offcanvas-header d-flex flex-column">
           <div class="container d-flex flex-row flex-nowrap justify-content-between align-items-center">
             <h5 class="offcanvas-title" id="cartOffcanvas">Your cart:</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" style="color: #ffde59;"></button>
           </div>
           <ul class="nav nav-tabs d-flex justify-content-around align-items-center flex-nowrap mt-3">
             <li class="nav-item m-3 fs-5">Id</li>
@@ -79,16 +79,69 @@
   
   <!--CATALOGO-->
   <main id="main">
-    
-    <section id="dark">
+
+    <section id="dark" class="d-none">
       <!--COINCIDENCIAS-->
-      <h1 class="text-center display-5 p-1" id="searchTitle">Search Results:</h1>
-      <div class="container d-flex flex-row flex-nowrap justify-content-center mb-5" id="coincidencia"></div>
+      <h1 class="text-center display-5 p-2" id="searchTitle">Search Results:</h1>
+      <div class="container d-flex flex-row flex-nowrap justify-content-center" id="coincidencia"></div>
     </section>
+
+
+    <div class="container-fluid" id="father">
+      <div class="container animate__animated animate__fadeInLeftBig" id="head1"></div>
+      <img src="./img/ICONO-INICIO.png" alt="students" class="animate__animated animate__fadeIn mw-50 shadow-lg" id="headImg">
+      <div class="container animate__animated animate__fadeInRightBig" id="head3">
+        <div class="container">
+          <h1 class="display-4" id="titulo">One</h1>
+          <h1 class="display-4" id="titulo">Click</h1>
+          <h1 class="display-4" id="titulo">English</h1>
+          <p class="lead mt-5">Your online learning platform</p>
+          <p class="lead">shall we learn together?</p>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="display-5 text-center p-3 my-4">Why us?</h1>
+
+    <div class="row g-4 row-cols-1 row-cols-lg-4">
+      <div class="feature col d-flex flex-column justify-content-center align-items-center">
+        <div class="feature-icon d-flex align-items-center justify-content-center fs-2 mb-3">
+          <i class="bi bi-people-fill animate__animated animate__flip"></i>
+        </div>
+        <h3 class="fs-2 text-center">Certified Teachers </h3>
+        <p class="text-center">All One Click English teachers have official certification in the language.</p>
+      </div>
+     
+      <div class="feature col d-flex flex-column justify-content-center align-items-center">
+        <div class="feature-icon d-flex align-items-center justify-content-center fs-2 mb-3">
+          <i class="bi bi-hand-index-thumb-fill animate__animated animate__flip"></i>
+        </div>
+        <h3 class="fs-2">Intensive</h3>
+        <p>Does 2 hours a week seem like a lot to you? Intensive format for you to get the most out of it.</p>
+      </div>
+
+      <div class="feature col d-flex flex-column justify-content-center align-items-center">
+        <div class="feature-icon d-flex align-items-center justify-content-center fs-2 mb-3">
+          <i class="bi bi-gear-wide animate__animated animate__flip"></i>
+        </div>
+        <h3 class="fs-2">Method</h3>
+        <p>At One Click English we are 100% sure that the best way to learn a language is by practicing it.</p>
+      </div>
+
+      <div class="feature col d-flex flex-column justify-content-center align-items-center">
+        <div class="feature-icon d-flex align-items-center justify-content-center fs-2 mb-3">
+          <i class="bi bi-wifi animate__animated animate__flip"></i>
+        </div>
+        <h3 class="fs-2">Online</h3>
+        <p>We are here to make things easy for you. Methodology 100% Online and tailored to you. You decide from where and when to learn.</p>
+      </div>
+    </div>
+    
     
     <section id="courses">
+
       <!-- CLASES INDIVIDUALES -->
-      <h1 class="text-center display-5 pt-0 animate__animated animate__bounceInLeft">Individual Classes</h1>
+      <h1 class="text-center display-5 pt-5 animate__animated animate__bounceInLeft">Individual Classes</h1>
       
       <!--LISTA-->
       <div class="row row-cols-1 row-cols-md-3 g-4 mx-1" id="coursesInd"></div>
@@ -98,12 +151,64 @@
     
       <!--LISTA-->
       <div class="row row-cols-1 row-cols-md-3 g-4 mx-1" id="coursesSp"></div>
+
       
       <!--CURSOS DE COACHING-->
+      <div class="container-fluid mt-5" id="mother">
+        <div class="container animate__animated animate__fadeInLeftBig" id="head1">
+          <div class="container">
+            <h1 class="display-4" id="titulo">What</h1>
+            <h1 class="display-4" id="titulo">Is</h1>
+            <h1 class="display-4" id="titulo">Coaching?</h1>
+            <p class="lead mt-5">Self-knowledge for self-improvement!</p>
+            <p class="lead">Grow with us!</p>
+          </div>
+        </div>
+        <div class="container animate__animated animate__fadeInRightBig" id="head2">
+          <img src="./img/Icono-One-Click-English-Examenes-300x300.png" alt="coaching" id="motherImg" class="animate__animated animate__fadeIn shadow-lg">
+        </div>
+        <div class="container animate__animated animate__fadeInRightBig" id="head3"></div>
+      </div>
+
       <h1 class="text-center display-5 m-auto animate__animated animate__bounceInLeft">Coaching Programs</h1>
       
+      <div class="row g-4 row-cols-1 row-cols-lg-3">
+        <div class="feature col d-flex flex-column justify-content-center align-items-center">
+          <div class="feature-icon d-flex align-items-center justify-content-center fs-2 mb-3">
+            <i class="bi bi-sort-up-alt animate__animated animate__flip"></i>
+          </div>
+          <h3 class="fs-2 text-center">Organizational Coaching</h3>
+          <p class="text-center">💜 Increases emotional intelligence.</p>
+          <p>💜 Improve interpersonal communication.</p> 
+          <p>💜 New perspectives regarding goals.</p> 
+          <p>💜 Improve the capacity for reflection and decision making.</p> 
+        </div>
+       
+        <div class="feature col d-flex flex-column justify-content-center align-items-center">
+          <div class="feature-icon d-flex align-items-center justify-content-center fs-2 mb-3">
+            <i class="bi bi-building-fill animate__animated animate__flip"></i>
+          </div>
+          <h3 class="fs-2">Personal Leadership</h3>
+          <p>💜 Improve flexibility and response to change.</p>
+          <p>💜 Improvement of the work environment.</p>
+          <p>💜 Improve performance and productivity.</p>
+          <p>💜 Better use of skills and resources.</p>
+        </div>
+  
+        <div class="feature col d-flex flex-column justify-content-center align-items-center">
+          <div class="feature-icon d-flex align-items-center justify-content-center fs-2 mb-3">
+            <i class="bi bi-person-hearts animate__animated animate__flip"></i>
+          </div>
+          <h3 class="fs-2">Onthological Approach</h3>
+          <p>💜 Unlock limiting beliefs.</p>
+          <p>💜 New interpretations and moods.</p>
+          <p>💜 Conversation design to enhance identity, action and c results.</p>
+          <p>💜 Active listening.</p>
+        </div>
+      </div>
+
       <!--LISTA-->
-      <div class="row row-cols-1 row-cols-md-3 g-4 mx-1 mb-5" id="coursesCh"></div>
+      <div class="row row-cols-1 row-cols-md-3 g-4 mx-1 my-5" id="coursesCh"></div>
     </section>
 
   
@@ -115,10 +220,10 @@
       </div>
       <div class="container" id="separator"></div>
       <div class="container">
-        <div class="container d-flex flex-row justify-content-center" id="background">
+        <div class="container d-flex flex-column justify-content-center" id="background">
           <a href="https://api.whatsapp.com/send/?phone=34636213876&text=Hola%21%21+Querr%C3%ADa+informaci%C3%B3n+sobre...&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer"><i class="animate__animated animate__wobble bi bi-phone"></i></a>
+          <h1 class="display-5 text-center fs-4">Get in touch!</h1>
         </div>
-        <h1 class="display-5 text-center">Get in touch!</h1>
       </div>
     </div>
     <div class="col col-7 d-flex flex-column align-items-start animate__animated animate__lightSpeedInRight">
@@ -170,12 +275,12 @@
   <!--LUXON.JS-->
   <script src="https://cdn.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js"></script>
 
+  <!--SWEET ALERT 2.JS-->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
   <!-- VANILLA.JS -->
   <script src="./scripts/class&Dom.js"></script>
   <script src="./scripts/functions.js"></script>
   <script src="./scripts/main.js"></script>
-
-  <!--SWEET ALERT 2.JS-->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
