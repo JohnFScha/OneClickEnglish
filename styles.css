@@ -357,18 +357,21 @@ main div.container-fluid#mother div.container#head3 {
   width: 30%;
   padding-top: 50px;
 }
-main div.feature.col i.bi {
+main div.row.d-flex {
+  width: calc(12px + 99.999%);
+}
+main div.row.d-flex div.feature i.bi {
   color: #87189d;
   text-shadow: #ffde59 2px 2px 5px;
   font-size: 50px;
 }
-main div.feature.col h3 {
+main div.row.d-flex div.feature h3 {
   color: #87189d;
   text-shadow: #ffde59 2px 2px 5px;
   font-family: "Poppins", sans-serif;
   color: #323437;
 }
-main div.feature.col p {
+main div.row.d-flex div.feature p {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   text-align: center;
@@ -462,6 +465,7 @@ main div.row#formDiv div.col-7 {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 25px;
 }
 main div.row#formDiv div.col-7 div#info {
   font-family: "Raleway", sans-serif;
@@ -471,6 +475,7 @@ main div.row#formDiv div.col-7 div#info h1 {
   font-weight: 400;
 }
 main div.row#formDiv div.col-7 form#form {
+  width: 90%;
   height: 300px;
   display: flex;
   flex-direction: column;
@@ -528,7 +533,7 @@ main div.row#formDiv div.col-3 {
   margin: 15px;
 }
 main div.row#formDiv div.col-3 div#background {
-  margin: auto;
+  align-items: center;
   background-color: #87189d;
   box-shadow: none;
 }

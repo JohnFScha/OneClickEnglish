@@ -384,22 +384,25 @@ main {
     }
   }
 
-  div.feature.col {
-    i.bi{
-      color: #87189d;
-      text-shadow: #ffde59 2px 2px 5px;
-      font-size: 50px;
-    }
-    h3 {
-      color: #87189d;
-      text-shadow: #ffde59 2px 2px 5px;
-      font-family: 'Poppins', sans-serif;
-      color: #323437;
-    }
-    p {
-      font-family: 'Raleway', sans-serif;
-      font-weight: 700;
-      text-align: center;
+  div.row.d-flex {
+    width: calc(12px + 99.999%);
+    div.feature {
+      i.bi{
+        color: #87189d;
+        text-shadow: #ffde59 2px 2px 5px;
+        font-size: 50px;
+      }
+      h3 {
+        color: #87189d;
+        text-shadow: #ffde59 2px 2px 5px;
+        font-family: 'Poppins', sans-serif;
+        color: #323437;
+      }
+      p {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        text-align: center;
+      }
     }
   }
 
@@ -415,7 +418,6 @@ main {
     &:hover {
       @include expand (scale(90%), 0.5s);
     }
-    
   }
   section.dark{
     background: rgba(0, 0, 0, 0.5);
@@ -500,6 +502,7 @@ main {
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-left: 25px;
       div#info {
         font-family: 'Raleway', sans-serif;
         color: #ffde59;
@@ -508,6 +511,7 @@ main {
         }
       }
       form#form {
+        width: 90%;
         height: 300px;
         display: flex;
         flex-direction: column;
@@ -551,7 +555,7 @@ main {
     div.col-3 {
       margin: 15px;
       div#background {
-        margin: auto;
+        align-items: center;
         @if (background-color: #87189d) {
           background-color: #87189d;
           box-shadow: none;
