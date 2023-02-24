@@ -217,7 +217,7 @@ function search (cursoBuscado, array) {
       darken.className = "dark animate__animated animate__fadeIn"
       headImg.className = "d-none"
       coincidencia.className = "container d-flex flex-row flex-nowrap justify-content-center mb-5 animate__animated animate__bounceIn"
-    } else if (cursoBuscado.length === 0) {
+    } else if (cursoBuscado.length <= 1) {
       coincidencia.innerHTML = ""
       searchHeader.innerText = ""
       darken.className = "d-none"
@@ -231,6 +231,7 @@ function search (cursoBuscado, array) {
       headImg.className = "d-none"
       coincidencia.className = "container d-flex flex-row flex-nowrap justify-content-center mb-5 animate__animated animate__bounceIn"
       searchHeader.innerText = "Search Results:"
+      window.scrollTo(top)
       coincidencias(busqueda)
     }
   }
