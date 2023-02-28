@@ -17,3 +17,5 @@ Este formulario tiene su html a parte a fin de poder programar la parte funciona
 Cada codigo esta comentado para entender mas facilmente que funcion cumple, asi como las secciones del html tienen comentarios para ver donde se imprime cada cosa desde el .js
 
 La pagina esta diseñada para escritorio, no es responsiva, con lo que no funciona fuera de pantallas grandes. Mas adelante podria adaptarla, pero al no ser obligatorio para la correccion, no lo inclui.
+
+La pagina consume informacion de tres fuentes: los cursos son traidos de manera asincronica de un .json creado con la informacion de los cursos. Por otra parte se usa informacion de dos APIs externas: Sweet Alert para todas las alertas contextuales, y Luxon para crear la fecha del dia para integrarla en el recibo final de la pagina de checkout.
