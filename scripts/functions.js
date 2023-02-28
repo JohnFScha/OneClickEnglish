@@ -76,7 +76,7 @@ function printSp (array) {
           showDenyButton: true,
           showCloseButton: true,
           color: '#87189d',
-          denyButtonColor: '#87189d',
+          denyButtonColor: 'gray',
           confirmButtonColor: '#87189d',
           confirmButtonText: 'Add',
           denyButtonText: `Don't add`,
@@ -127,7 +127,7 @@ function printCh (array) {
           showDenyButton: true,
           showCloseButton: true,
           color: '#87189d',
-          denyButtonColor: '#87189d',
+          denyButtonColor: 'gray',
           confirmButtonColor: '#87189d',
           confirmButtonText: 'Add',
           denyButtonText: `Don't add`,
@@ -180,7 +180,7 @@ function coincidencias (array) {
         showDenyButton: true,
         showCloseButton: true,
         color: '#87189d',
-        denyButtonColor: '#87189d',
+        denyButtonColor: 'gray',
         confirmButtonColor: '#87189d',
         confirmButtonText: 'Add',
         denyButtonText: `Don't add`,
@@ -303,7 +303,7 @@ deleteCart.addEventListener("click", () => {
       showDenyButton: true,
       showCloseButton: true,
       color: '#87189d',
-      denyButtonColor: '#87189d',
+      denyButtonColor: 'gray',
       confirmButtonColor: '#87189d',
       confirmButtonText: 'Delete',
       denyButtonText: `Keep items in cart`,
@@ -384,7 +384,7 @@ submitBtn.addEventListener("click", (event) => {
       icon: 'info',
       showCancelButton: true,
       confirmButtonColor: '#87189d',
-      cancelButtonColor: '#87189d',
+      cancelButtonColor: 'gray',
       confirmButtonText: 'Save info'
     }).then((result) => {
       if (result.isConfirmed) {
@@ -420,7 +420,7 @@ deleteMessage.addEventListener("click", ()=> {
       icon: 'info',
       showCancelButton: true,
       confirmButtonColor: '#87189d',
-      cancelButtonColor: '#87189d',
+      cancelButtonColor: 'gray',
       confirmButtonText: 'Ok'
     }).then((result) => {
       if (result.isConfirmed) {
