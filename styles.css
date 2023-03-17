@@ -39,6 +39,17 @@ header h1:hover {
   transform: scale(120%);
   transition: 0.5s;
 }
+header a.btn-outline-primary {
+  text-decoration: none;
+  height: auto;
+  color: #ffde59;
+  border: 1px solid #ffde59;
+}
+header a.btn-outline-primary:hover {
+  background-color: #ffde59;
+  color: #87189d;
+  border: 1px solid #ffde59;
+}
 header form {
   display: flex;
   flex-flow: row nowrap;
@@ -46,11 +57,6 @@ header form {
 header form input.form-control {
   background-color: white;
   color: black;
-}
-header form button.btn {
-  margin-left: 10px;
-  background-color: #87189d;
-  color: #ffde59;
 }
 header button.btn {
   color: #ffde59;
@@ -555,12 +561,26 @@ main div.row#formDiv div.col-3 div#background a:hover {
   animation-delay: 0.5s;
   animation-iteration-count: infinite;
 }
+main div.row#formDiv div.col-3 div#background i.bi-laptop {
+  font-size: 50px;
+  font-weight: 800;
+  color: #87189d;
+  background-color: #ffde59;
+  border-radius: 50%;
+  padding: 5px 15px;
+  transition: 2s;
+}
 main div.row#formDiv div.col-3 div#background h1 {
   color: #ffde59;
   text-shadow: #323437 2px 2px 5px;
   font-size: 35px;
   margin-bottom: 15px;
+  margin-top: 5px;
   padding: 0;
+}
+main div.row#formDiv div.col-3 div#background h1 a {
+  text-decoration: none;
+  color: #ffde59;
 }
 main div.row#formDiv div.col-3 div#separator {
   height: 100px;
