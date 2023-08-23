@@ -1,4 +1,4 @@
-# EntregaFinalJS
+# One Click English landing page
 
 Simulador interactivo de una Academia de ingles online, en parte el proyecto lo hice con assets de la pagina de la amiga a la que le propuse ayudar con este proyecto
 (https://oneclickenglish.com/).
