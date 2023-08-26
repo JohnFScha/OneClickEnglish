@@ -364,23 +364,30 @@ main div.container-fluid#mother div.container#head3 {
   padding-top: 50px;
 }
 main div.row.d-flex {
-  width: calc(12px + 99.999%);
+  width: calc(12px + 90%);
+  margin: auto;
+  border-radius: 1rem;
+  box-shadow: 0px 5px 15px #323437;
+  background-color: #87189d;
+}
+main div.row.d-flex div.feature {
+  align-items: stretch;
 }
 main div.row.d-flex div.feature i.bi {
-  color: #87189d;
-  text-shadow: #ffde59 2px 2px 5px;
+  color: #ffde59;
+  text-shadow: #323437 2px 2px 5px;
   font-size: 50px;
 }
 main div.row.d-flex div.feature h3 {
-  color: #87189d;
-  text-shadow: #ffde59 2px 2px 5px;
+  color: #ffde59;
+  text-shadow: #323437 2px 2px 5px;
   font-family: "Poppins", sans-serif;
-  color: #323437;
 }
 main div.row.d-flex div.feature p {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   text-align: center;
+  color: #ffde59;
 }
 main h1.display-5 {
   width: 100%;
