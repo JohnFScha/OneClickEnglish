@@ -426,7 +426,7 @@ main div.container.d-flex.flex-row div.card {
 main div.card {
   width: 80%;
   margin: auto;
-  background-color: white;
+  background-color: #ffde59;
   border: gray 1.3px solid;
   color: #87189d;
   font-size: calc(15px + 10%);
@@ -441,7 +441,8 @@ main div.card div.card-body h1 {
 main div.card button.btn-outline-primary {
   width: 75%;
   margin: 10px;
-  color: #87189d;
+  color: #ffde59;
+  background-color: #323437;
   border: #87189d 1.5px solid;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
