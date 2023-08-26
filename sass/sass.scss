@@ -386,29 +386,34 @@ main {
     div.container#head3 {
       background-color: #87189d;
       height: 800px;
-      width: 30%;
+      width: 30%; 
       padding-top: 50px;
     }
   }
 
   div.row.d-flex {
-    width: calc(12px + 99.999%);
+    width: calc(12px + 90%);
+    margin: auto;
+    border-radius: 1rem;
+    box-shadow: 0px 5px 15px #323437;
+    background-color: #87189d;
     div.feature {
+      align-items: stretch;
       i.bi{
-        color: #87189d;
-        text-shadow: #ffde59 2px 2px 5px;
+        color: #ffde59;
+        text-shadow: #323437 2px 2px 5px;
         font-size: 50px;
       }
       h3 {
-        color: #87189d;
-        text-shadow: #ffde59 2px 2px 5px;
+        color: #ffde59;
+        text-shadow: #323437 2px 2px 5px;
         font-family: 'Poppins', sans-serif;
-        color: #323437;
       }
       p {
         font-family: 'Raleway', sans-serif;
         font-weight: 700;
         text-align: center;
+        color: #ffde59;
       }
     }
   }
