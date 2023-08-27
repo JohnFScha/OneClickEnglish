@@ -21,7 +21,7 @@ body {
 
 header {
   font-family: 'Raleway', sans-serif;
-  background-color: #87189d;
+  background-color: $primary-color;
   #oneClick {
     width: calc(150px + 1.5vw);
     height: auto;
@@ -32,7 +32,7 @@ header {
   }
   h1 {
     font-weight: 400;
-    color: #ffde59;
+    color: $secondary-color;
     text-shadow: white 2px 2px 5px;
     transition: 0.5s;
     &:hover {
@@ -42,12 +42,12 @@ header {
   a.btn-outline-primary {
     text-decoration: none;
     height: auto;
-    color: #ffde59;
-    border: 1px solid #ffde59;
+    color: $secondary-color;
+    border: 1px solid $secondary-color;
     &:hover {
-      background-color: #ffde59;
-      color: #87189d;
-      border: 1px solid #ffde59;
+      @include hover-effect($primary-color, $secondary-color);
+
+      border: 1px solid $secondary-color;
     }
   }
 
@@ -60,31 +60,31 @@ header {
     }
   }
   button.btn{
-    color: #ffde59;
-    border: 1px solid #ffde59;
+    color: $secondary-color;
+    border: 1px solid $secondary-color;
     &:hover {
-      background-color: #ffde59;
-      color: #87189d;
+      @include hover-effect($primary-color, $secondary-color);
     }
+    
   }
   small#quantity {
     position: absolute;
     right: 20px;
     bottom: 10px;
     padding: 5px 8px;
-    background-color: #ffde59;
-    color: #87189d;
-    border: #ffde59 1px solid;
+    background-color: $secondary-color;
+    color: $primary-color;
+    border: $secondary-color 1px solid;
     border-radius: 15px;
     font-size: x-small;
   }
   /*CARRITO*/
   div.offcanvas {
-    background-color: #323437;
-    color: #ffde59;
+    background-color: $background-color;
+    color: $secondary-color;
     div.offcanvas-header{
       button.btn-close {
-        $btn-close-color:  #ffde59;
+        $btn-close-color: $secondary-color;
       }
     }
   }
@@ -110,36 +110,36 @@ main {
       h4 {
         span {
           font-family: 'Poppins', sans-serif;
-          color: #87189d;
+          color: $primary-color;
           text-decoration: none;
         }
         span.badge.rounded-pill {
           font-family: 'Poppins', sans-serif;
-          background-color: #87189d;
+          background-color: $primary-color;
           padding: 10px;
-          color: #ffde59;
+          color:$secondary-color;
         }
       }
       ul.list-group {
         font-family: 'Raleway', sans-serif;
         font-size: 20px;
         li.list-group-item {
-          background-color: #87189d;
-          color: #ffde59;
+          background-color: $primary-color;
+          color:$secondary-color;
         }
       }
     }
     div.container#total {
-      background-color: #87189d;
-      color: #ffde59;
+      background-color: $primary-color;
+      color:$secondary-color;
     }
   }
   div.py-5 {
     h2 {
       font-family: 'Poppins', sans-serif;
-      color: #87189d;
+      color: $primary-color;
       font-size: 50px;
-      text-shadow: #ffde59 2px 2px 5px;
+      text-shadow:$secondary-color 2px 2px 5px;
       transition: 0.5s;
       &:hover {
         @include expand (scale(110%), 0.5s);
@@ -148,56 +148,55 @@ main {
     p {
       font-family: 'Raleway', sans-serif;
       font-weight: 400;
-      color: #87189d;
+      color: $primary-color;
       font-style: italic;
     }
   }
   div.col-md-7 {
     padding: 20px;
     background-color: white;
-    border: #87189d 1px solid;
+    border: $primary-color 1px solid;
     border-radius: 15px;
     backdrop-filter: opacity(50%);
     font-family: 'Raleway', sans-serif;
     h4.mb-3 {
       font-weight: 700;
       font-size: 30px;
-      color: #87189d;
+      color: $primary-color;
     }
     label.form-label{
       font-size: 20px;
       font-weight: 400;
-      color: #87189d;
+      color: $primary-color;
       margin: 10px;
     }
     input.form-control {
       font-size: 20px;
-      background-color: #87189d;
-      color: #ffde59;
+      background-color: $primary-color;
+      color:$secondary-color;
       &::placeholder {
-        color: #ffde59;
+        color:$secondary-color;
       }
     }
     select.form-select {
       font-size: 20px;
-      background-color: #87189d;
-      color: #ffde59;
+      background-color: $primary-color;
+      color:$secondary-color;
     }
     div.form-check {
-      color: #87189d;
+      color: $primary-color;
       font-size: 20px;
       margin: 10px;
     }
     button.btn-primary {
-      background-color: #87189d;
+      background-color: $primary-color;
       font-size: 25px;
-      color: #ffde59;
+      color:$secondary-color;
       font-family: 'Raleway', sans-serif;
       font-weight: 400;
-      border: 1px solid #323437;
+      border: 1px solid $background-color;
       &:hover {
-        background-color: #ffde59;
-        color: #87189d;
+        @include hover-effect($primary-color, $secondary-color)
       }
     }
   }
@@ -214,23 +213,23 @@ main {
       div.col-xl-12 {
         ul.list-unlysted{
           font-family: 'Raleway', sans-serif;
-          color: #87189d;
+          color: $primary-color;
         }
       }
       div.col-xl-12 {
         ul.list-unlysted{
           font-family: 'Raleway', sans-serif;
-          color: #87189d;
+          color: $primary-color;
         }
         span.badge {
-          color: #323437;
+          color: $background-color;
         }
       }
     }
     div.row {
       div.col-xl-9 {
         font-family: 'Raleway', sans-serif;
-        color: #87189d;
+        color: $primary-color;
       }
     }
     div.row {
@@ -239,13 +238,13 @@ main {
         tbody {
           th {
             font-family: 'Raleway', sans-serif;
-            background-color: #ffde59;
-            color: #87189d;
+            background-color:$secondary-color;
+            color: $primary-color;
           }
           td {
             font-family: 'Raleway', sans-serif;
-            background-color: #ffde59;
-            color: #87189d;
+            background-color:$secondary-color;
+            color: $primary-color;
             font-weight: 400;
           }
         }
@@ -265,13 +264,13 @@ main {
     margin-bottom: 15px;
     padding: 0;
     div.container#head1 {
-      background-color: #87189d;
+      background-color: $primary-color;
       height: 800px;
       width: 30%;
       padding-top: 50px;
     }
     div.container#head3 {
-      background-color: #ffde59;
+      background-color:$secondary-color;
       height: 800px;
       width: 70%;
       padding-top: 50px;
@@ -292,16 +291,16 @@ main {
           width: 100%;
           font-family: 'Poppins', sans-serif;
           font-weight: bolder;
-          color: #87189d;
-          text-shadow: #ffde59 2px 2px 5px;
+          color: $primary-color;
+          text-shadow:$secondary-color 2px 2px 5px;
         }
         p.lead {
           font-family: 'Montserrat', sans-serif;
           width: 100%;
           font-family: 'Poppins', sans-serif;
           font-weight: bolder;
-          color: #87189d;
-          text-shadow: #ffde59 2px 2px 5px;
+          color: $primary-color;
+          text-shadow:$secondary-color 2px 2px 5px;
           text-align: end;
         }
         transition: 0.5s;
@@ -331,7 +330,7 @@ main {
     margin-bottom: 15px;
     padding: 0;
     div.container#head1 {
-      background-color: #ffde59;
+      background-color:$secondary-color;
       height: 800px;
       width: 70%;
       padding-top: 50px;
@@ -350,15 +349,15 @@ main {
           font-family: 'Montserrat', sans-serif;
           font-family: 'Poppins', sans-serif;
           font-weight: bolder;
-          color: #87189d;
-          text-shadow: #ffde59 2px 2px 5px;
+          color: $primary-color;
+          text-shadow:$secondary-color 2px 2px 5px;
         }
         p.lead {
           font-family: 'Montserrat', sans-serif;
           font-family: 'Poppins', sans-serif;
           font-weight: bolder;
-          color: #87189d;
-          text-shadow: #ffde59 2px 2px 5px;
+          color: $primary-color;
+          text-shadow:$secondary-color 2px 2px 5px;
           text-align: start;
         }
         transition: 0.5s;
@@ -368,7 +367,7 @@ main {
       }
     }
     div.container#head2 {
-      background-color: #87189d;
+      background-color: $primary-color;
       img#motherImg {
         background-color: transparent;
         padding: 20px;
@@ -384,7 +383,7 @@ main {
     }
     }
     div.container#head3 {
-      background-color: #87189d;
+      background-color: $primary-color;
       height: 800px;
       width: 30%; 
       padding-top: 50px;
@@ -395,26 +394,26 @@ main {
     width: calc(12px + 90%);
     margin: auto;
     border-radius: 1rem;
-    box-shadow: 0px 5px 15px #323437;
-    background-color: #87189d;
+    box-shadow: 0px 5px 15px $background-color;
+    background-color: $primary-color;
     padding: 2rem;
     div.feature {
       align-items: stretch;
       i.bi{
-        color: #ffde59;
-        text-shadow: #323437 2px 2px 5px;
+        color:$secondary-color;
+        text-shadow: $background-color 2px 2px 5px;
         font-size: 50px;
       }
       h3 {
-        color: #ffde59;
-        text-shadow: #323437 2px 2px 5px;
+        color:$secondary-color;
+        text-shadow: $background-color 2px 2px 5px;
         font-family: 'Poppins', sans-serif;
       }
       p {
         font-family: 'Raleway', sans-serif;
         font-weight: 700;
         text-align: center;
-        color: #ffde59;
+        color:$secondary-color;
       }
     }
   }
@@ -425,8 +424,8 @@ main {
     padding-bottom: 75px;
     font-family: 'Poppins', sans-serif;
     font-weight: bolder;
-    color: #87189d;
-    text-shadow: #ffde59 2px 2px 5px;
+    color: $primary-color;
+    text-shadow:$secondary-color 2px 2px 5px;
     transition: 0.5s;
     &:hover {
       @include expand (scale(90%), 0.5s);
@@ -446,9 +445,9 @@ main {
     justify-content: center;
     width: 90%;
     height: auto;
-    background-color: #ffde59;
+    background-color:$secondary-color;
     border-radius: 15px;
-    box-shadow: #323437 2px 2px 10px;
+    box-shadow: $background-color 2px 2px 10px;
     div.card {
       width: 50%;
     }
@@ -456,12 +455,7 @@ main {
   /*FIN COINCIDENCIAS*/
   
   div.card {
-    width: 80%;
-    margin: auto;
-    background-color: #ffde59;
-    border: gray 1.3px solid;
-    color: #87189d;
-    font-size: calc(15px + 10%);
+    @extend %card-style;
     
     div.card-body {
       p.card-text {
@@ -475,24 +469,23 @@ main {
     button.btn-outline-primary {
       width: 75%;
       margin: 10px;
-      color: #ffde59;
-      background-color: #323437;
-      border: #87189d 1.5px solid;
+      color:$secondary-color;
+      background-color: $background-color;
+      border: $primary-color 1.5px solid;
       font-family: 'Raleway', sans-serif;
       font-weight: 400;
       font-size: 20px;
       &:hover {
-        background-color: #87189d;
-        color: #ffde59;
+        @include hover-effect($secondary-color, $primary-color);
       }
     }
   }
   a.btn {
-    color: #87189d;
-    border: #87189d 1.5px solid;
+    color: $primary-color;
+    border: $primary-color 1.5px solid;
     &:hover {
-      background-color: #87189d;
-      color: #ffde59;
+      @include hover-effect($secondary-color, $primary-color);
+
     }
   }
   
@@ -500,7 +493,7 @@ main {
   div.row#formDiv{
     margin: 0;
     padding-top: 25px;
-    background-color: #87189d;
+    background-color: $primary-color;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -520,7 +513,7 @@ main {
       margin-left: 25px;
       div#info {
         font-family: 'Raleway', sans-serif;
-        color: #ffde59;
+        color:$secondary-color;
         h1 {
           font-weight: 400;
         }
@@ -535,14 +528,14 @@ main {
           @include input_style;
           width: 100%;
           &::placeholder{
-            color:#ffde59;
+            color: $secondary-color;
           }
         }
         textarea.form-control {
           @include input_style;
           margin-top: 20px;
           &::placeholder {
-            color: #ffde59;
+            color:$secondary-color;
           }
         }
         label[for="floatingTextarea"] {
@@ -556,12 +549,11 @@ main {
           button.btn-lg {
             margin-left: 10px;
             width: 15%;
-            border: 1px solid #ffde59;
-            color: #ffde59;
+            border: 1px solid$secondary-color;
+            color:$secondary-color;
             &:hover {
-              background-color: #ffde59;
-              color: #87189d;
-              border: 1px solid #87189d;
+              @include hover-effect($primary-color, $secondary-color);
+              border: 1px solid $primary-color;
             }
           }
         }
@@ -571,8 +563,8 @@ main {
       margin: 15px;
       div#background {
         align-items: center;
-        @if (background-color: #87189d) {
-          background-color: #87189d;
+        @if (background-color: $primary-color) {
+          background-color: $primary-color;
           box-shadow: none;
         }
         a {
@@ -580,8 +572,8 @@ main {
           i.bi-phone {
             font-size: 50px;
             font-weight: 800;
-            color: #87189d;
-            background-color: #ffde59;
+            color: $primary-color;
+            background-color:$secondary-color;
             border-radius: 50%;
             padding: 5px 15px;
             transition: 2s;
@@ -596,23 +588,23 @@ main {
         i.bi-laptop {
           font-size: 50px;
           font-weight: 800;
-          color: #87189d;
-          background-color: #ffde59;
+          color: $primary-color;
+          background-color:$secondary-color;
           border-radius: 50%;
           padding: 5px 15px;
           transition: 2s;
         }
         h1 {
-          @if (background-color: #87189d) {
-            color:#ffde59;
-            text-shadow: #323437 2px 2px 5px;
+          @if (background-color: $primary-color) {
+            color: $secondary-color;
+            text-shadow: $background-color 2px 2px 5px;
             font-size: 35px;
             margin-bottom: 15px;
             margin-top: 5px;
             padding: 0;
             a {
               text-decoration: none;
-              color: #ffde59;
+              color:$secondary-color;
             }
           }
         }
@@ -628,8 +620,8 @@ main {
 
 /* FOOTER */
 footer.d-flex {
-  background-color: #323437;
-  color: #ffde59;
+  background-color: $background-color;
+  color:$secondary-color;
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
   margin: 0;
@@ -645,7 +637,7 @@ footer.d-flex {
     li{
       a {
         i.bi {
-          color: #ffde59;
+          color:$secondary-color;
         }
       }
       transition: 0.5s;

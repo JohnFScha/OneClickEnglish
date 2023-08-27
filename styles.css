@@ -1,4 +1,13 @@
 @import "animate.css";
+main div.card {
+  width: 80%;
+  margin: auto;
+  background-color: #ffde59;
+  border: gray 1.3px solid;
+  color: #87189d;
+  font-size: calc(15px + 10%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -46,8 +55,8 @@ header a.btn-outline-primary {
   border: 1px solid #ffde59;
 }
 header a.btn-outline-primary:hover {
-  background-color: #ffde59;
   color: #87189d;
+  background-color: #ffde59;
   border: 1px solid #ffde59;
 }
 header form {
@@ -63,8 +72,8 @@ header button.btn {
   border: 1px solid #ffde59;
 }
 header button.btn:hover {
-  background-color: #ffde59;
   color: #87189d;
+  background-color: #ffde59;
 }
 header small#quantity {
   position: absolute;
@@ -184,8 +193,8 @@ main div.col-md-7 button.btn-primary {
   border: 1px solid #323437;
 }
 main div.col-md-7 button.btn-primary:hover {
-  background-color: #ffde59;
   color: #87189d;
+  background-color: #ffde59;
 }
 main section#receipt {
   display: flex;
@@ -423,14 +432,6 @@ main div.container.d-flex.flex-row {
 main div.container.d-flex.flex-row div.card {
   width: 50%;
 }
-main div.card {
-  width: 80%;
-  margin: auto;
-  background-color: #ffde59;
-  border: gray 1.3px solid;
-  color: #87189d;
-  font-size: calc(15px + 10%);
-}
 main div.card div.card-body p.card-text {
   color: gray;
 }
@@ -449,16 +450,16 @@ main div.card button.btn-outline-primary {
   font-size: 20px;
 }
 main div.card button.btn-outline-primary:hover {
-  background-color: #87189d;
   color: #ffde59;
+  background-color: #87189d;
 }
 main a.btn {
   color: #87189d;
   border: #87189d 1.5px solid;
 }
 main a.btn:hover {
-  background-color: #87189d;
   color: #ffde59;
+  background-color: #87189d;
 }
 main div.row#formDiv {
   margin: 0;
@@ -540,8 +541,8 @@ main div.row#formDiv div.col-7 form#form div.col button.btn-lg {
   color: #ffde59;
 }
 main div.row#formDiv div.col-7 form#form div.col button.btn-lg:hover {
-  background-color: #ffde59;
   color: #87189d;
+  background-color: #ffde59;
   border: 1px solid #87189d;
 }
 main div.row#formDiv div.col-3 {

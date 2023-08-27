@@ -1,3 +1,18 @@
+// Font styles:
+$primary-color: #87189d;
+$secondary-color: #ffde59;
+$background-color: #323437;
+$font-family: 'Raleway', sans-serif;
+$font-family-heading: 'Poppins', sans-serif;
+$font-weight-bold: bold;
+
+// Mixins
+
+@mixin hover-effect($color, $bg-color)  {
+  color: $color;
+  background-color: $bg-color;
+}
+
 @mixin expand ($transform, $transition) {
   transform: $transform;
   transition: $transition;
@@ -13,3 +28,15 @@
   background-color: #87189d;
   color: #ffde59;
 }
+
+// Extends
+
+%card-style {
+  width: 80%;
+  margin: auto;
+  background-color: $secondary-color;
+  border: gray 1.3px solid;
+  color: $primary-color;
+  font-size: calc(15px + 10%);
+}
+
