@@ -20,7 +20,7 @@ body {
 /*HEADER*/
 
 header {
-  font-family: 'Raleway', sans-serif;
+  font-family: $font-family;
   background-color: $primary-color;
   #oneClick {
     width: calc(150px + 1.5vw);
@@ -109,19 +109,19 @@ main {
     div.container {
       h4 {
         span {
-          font-family: 'Poppins', sans-serif;
+          font-family: $font-family-heading;
           color: $primary-color;
           text-decoration: none;
         }
         span.badge.rounded-pill {
-          font-family: 'Poppins', sans-serif;
+          font-family: $font-family-heading;
           background-color: $primary-color;
           padding: 10px;
           color:$secondary-color;
         }
       }
       ul.list-group {
-        font-family: 'Raleway', sans-serif;
+        font-family: $font-family;
         font-size: 20px;
         li.list-group-item {
           background-color: $primary-color;
@@ -136,7 +136,7 @@ main {
   }
   div.py-5 {
     h2 {
-      font-family: 'Poppins', sans-serif;
+      font-family: $font-family-heading;
       color: $primary-color;
       font-size: 50px;
       text-shadow:$secondary-color 2px 2px 5px;
@@ -146,7 +146,7 @@ main {
       }
     }
     p {
-      font-family: 'Raleway', sans-serif;
+      font-family: $font-family;
       font-weight: 400;
       color: $primary-color;
       font-style: italic;
@@ -158,9 +158,9 @@ main {
     border: $primary-color 1px solid;
     border-radius: 15px;
     backdrop-filter: opacity(50%);
-    font-family: 'Raleway', sans-serif;
+    font-family: $font-family;
     h4.mb-3 {
-      font-weight: 700;
+      font-weight: $font-weight-bold;
       font-size: 30px;
       color: $primary-color;
     }
@@ -192,7 +192,7 @@ main {
       background-color: $primary-color;
       font-size: 25px;
       color:$secondary-color;
-      font-family: 'Raleway', sans-serif;
+      font-family: $font-family;
       font-weight: 400;
       border: 1px solid $background-color;
       &:hover {
@@ -207,18 +207,18 @@ main {
     justify-content: center;
     margin: auto;
     div.col-xl-12 {
-      font-family: 'Poppins', sans-serif;
+      font-family: $font-family-heading;
     }
     div.row {
       div.col-xl-12 {
         ul.list-unlysted{
-          font-family: 'Raleway', sans-serif;
+          font-family: $font-family;
           color: $primary-color;
         }
       }
       div.col-xl-12 {
         ul.list-unlysted{
-          font-family: 'Raleway', sans-serif;
+          font-family: $font-family;
           color: $primary-color;
         }
         span.badge {
@@ -228,7 +228,7 @@ main {
     }
     div.row {
       div.col-xl-9 {
-        font-family: 'Raleway', sans-serif;
+        font-family: $font-family;
         color: $primary-color;
       }
     }
@@ -237,12 +237,12 @@ main {
         border-radius: 20px;
         tbody {
           th {
-            font-family: 'Raleway', sans-serif;
+            font-family: $font-family;
             background-color:$secondary-color;
             color: $primary-color;
           }
           td {
-            font-family: 'Raleway', sans-serif;
+            font-family: $font-family;
             background-color:$secondary-color;
             color: $primary-color;
             font-weight: 400;
@@ -289,7 +289,7 @@ main {
           font-size: 100px;
           font-family: 'Montserrat', sans-serif;
           width: 100%;
-          font-family: 'Poppins', sans-serif;
+          font-family: $font-family-heading;
           font-weight: bolder;
           color: $primary-color;
           text-shadow:$secondary-color 2px 2px 5px;
@@ -297,7 +297,7 @@ main {
         p.lead {
           font-family: 'Montserrat', sans-serif;
           width: 100%;
-          font-family: 'Poppins', sans-serif;
+          font-family: $font-family-heading;
           font-weight: bolder;
           color: $primary-color;
           text-shadow:$secondary-color 2px 2px 5px;
@@ -347,14 +347,14 @@ main {
           padding: 0;
           font-size: 80px;
           font-family: 'Montserrat', sans-serif;
-          font-family: 'Poppins', sans-serif;
+          font-family: $font-family-heading;
           font-weight: bolder;
           color: $primary-color;
           text-shadow:$secondary-color 2px 2px 5px;
         }
         p.lead {
           font-family: 'Montserrat', sans-serif;
-          font-family: 'Poppins', sans-serif;
+          font-family: $font-family-heading;
           font-weight: bolder;
           color: $primary-color;
           text-shadow:$secondary-color 2px 2px 5px;
@@ -407,11 +407,11 @@ main {
       h3 {
         color:$secondary-color;
         text-shadow: $background-color 2px 2px 5px;
-        font-family: 'Poppins', sans-serif;
+        font-family: $font-family-heading;
       }
       p {
-        font-family: 'Raleway', sans-serif;
-        font-weight: 700;
+        font-family: $font-family;
+        font-weight: $font-weight-bold;
         text-align: center;
         color:$secondary-color;
       }
@@ -422,7 +422,7 @@ main {
     width: 100%;
     padding-top: 50px;
     padding-bottom: 75px;
-    font-family: 'Poppins', sans-serif;
+    font-family: $font-family-heading;
     font-weight: bolder;
     color: $primary-color;
     text-shadow:$secondary-color 2px 2px 5px;
@@ -462,8 +462,8 @@ main {
         color: gray;
       }
       h1 {
-        font-family: 'Raleway', sans-serif;
-        font-weight: 700;
+        font-family: $font-family;
+        font-weight: $font-weight-bold;
       }
     }
     button.btn-outline-primary {
@@ -472,7 +472,7 @@ main {
       color:$secondary-color;
       background-color: $background-color;
       border: $primary-color 1.5px solid;
-      font-family: 'Raleway', sans-serif;
+      font-family: $font-family;
       font-weight: 400;
       font-size: 20px;
       &:hover {
@@ -512,7 +512,7 @@ main {
       align-items: center;
       margin-left: 25px;
       div#info {
-        font-family: 'Raleway', sans-serif;
+        font-family: $font-family;
         color:$secondary-color;
         h1 {
           font-weight: 400;
@@ -622,7 +622,7 @@ main {
 footer.d-flex {
   background-color: $background-color;
   color:$secondary-color;
-  font-family: 'Raleway', sans-serif;
+  font-family: $font-family;
   font-weight: bold;
   margin: 0;
   div {
