@@ -9,6 +9,7 @@
 body {
   background-image: url(./img/backdrop.png);
   object-fit: cover;
+  font-size: $base-font-size;
 }
 
 
@@ -69,14 +70,14 @@ header {
   }
   small#quantity {
     position: absolute;
-    right: 20px;
+    right: 1.25rem;
     bottom: 10px;
     padding: 5px 8px;
     background-color: $secondary-color;
     color: $primary-color;
     border: $secondary-color 1px solid;
     border-radius: 15px;
-    font-size: x-small;
+    font-size: 0.7rem;
   }
   /*CARRITO*/
   div.offcanvas {
@@ -100,7 +101,7 @@ main {
     border: 1px rgb(212, 209, 209) solid;
     border-radius: 10px;
     strong {
-      font-size: 20px;
+      font-size: 1.25rem;
     }
   }
   
@@ -122,7 +123,7 @@ main {
       }
       ul.list-group {
         font-family: $font-family;
-        font-size: 20px;
+        font-size: 1.25rem;
         li.list-group-item {
           background-color: $primary-color;
           color:$secondary-color;
@@ -138,7 +139,7 @@ main {
     h2 {
       font-family: $font-family-heading;
       color: $primary-color;
-      font-size: 50px;
+      font-size: 2.5rem;
       text-shadow:$secondary-color 2px 2px 5px;
       transition: 0.5s;
       &:hover {
@@ -153,7 +154,7 @@ main {
     }
   }
   div.col-md-7 {
-    padding: 20px;
+    padding: 1.25rem;
     background-color: white;
     border: $primary-color 1px solid;
     border-radius: 15px;
@@ -161,17 +162,17 @@ main {
     font-family: $font-family;
     h4.mb-3 {
       font-weight: $font-weight-bold;
-      font-size: 30px;
+      font-size: 2rem;
       color: $primary-color;
     }
     label.form-label{
-      font-size: 20px;
+      font-size: 1.25rem;
       font-weight: 400;
       color: $primary-color;
       margin: 10px;
     }
     input.form-control {
-      font-size: 20px;
+      font-size: 1.25rem;
       background-color: $primary-color;
       color:$secondary-color;
       &::placeholder {
@@ -179,18 +180,18 @@ main {
       }
     }
     select.form-select {
-      font-size: 20px;
+      font-size: 1.25rem;
       background-color: $primary-color;
       color:$secondary-color;
     }
     div.form-check {
       color: $primary-color;
-      font-size: 20px;
+      font-size: 1.25rem;
       margin: 10px;
     }
     button.btn-primary {
       background-color: $primary-color;
-      font-size: 25px;
+      font-size: 1.5rem;
       color:$secondary-color;
       font-family: $font-family;
       font-weight: 400;
@@ -234,7 +235,7 @@ main {
     }
     div.row {
       table {
-        border-radius: 20px;
+        border-radius: 1.25rem;
         tbody {
           th {
             font-family: $font-family;
@@ -286,7 +287,7 @@ main {
           text-align: end;
           margin: 0;
           padding: 0;
-          font-size: 100px;
+          font-size: 6.25rem;
           font-family: 'Montserrat', sans-serif;
           width: 100%;
           font-family: $font-family-heading;
@@ -345,7 +346,7 @@ main {
           text-align: start;
           margin: 0;
           padding: 0;
-          font-size: 80px;
+          font-size: 5rem;
           font-family: 'Montserrat', sans-serif;
           font-family: $font-family-heading;
           font-weight: bolder;
@@ -370,7 +371,7 @@ main {
       background-color: $primary-color;
       img#motherImg {
         background-color: transparent;
-        padding: 20px;
+        padding: 1.25rem;
         z-index: 1000;
         width: 80%;
         position: absolute;
@@ -402,7 +403,7 @@ main {
       i.bi{
         color:$secondary-color;
         text-shadow: $background-color 2px 2px 5px;
-        font-size: 50px;
+        font-size: 3.125rem;
       }
       h3 {
         color:$secondary-color;
@@ -433,7 +434,7 @@ main {
   }
   section.dark{
     background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
+    padding: 1.25rem;
   }
 
   /*COINCIDENCIAS*/
@@ -445,8 +446,9 @@ main {
     justify-content: center;
     width: 90%;
     height: auto;
-    background-color:$secondary-color;
+    background-color: $background-color; 
     border-radius: 15px;
+    padding: 1rem;
     box-shadow: $background-color 2px 2px 10px;
     div.card {
       width: 50%;
@@ -474,7 +476,7 @@ main {
       border: $primary-color 1.5px solid;
       font-family: $font-family;
       font-weight: 400;
-      font-size: 20px;
+      font-size: 1.25rem;
       &:hover {
         @include hover-effect($secondary-color, $primary-color);
       }
@@ -533,7 +535,7 @@ main {
         }
         textarea.form-control {
           @include input_style;
-          margin-top: 20px;
+          margin-top: 1.25rem;
           &::placeholder {
             color:$secondary-color;
           }
@@ -570,7 +572,7 @@ main {
         a {
           margin: auto;
           i.bi-phone {
-            font-size: 50px;
+            font-size: 3.125rem;
             font-weight: 800;
             color: $primary-color;
             background-color:$secondary-color;
@@ -586,7 +588,7 @@ main {
           }
         }
         i.bi-laptop {
-          font-size: 50px;
+          font-size: 3.125rem;
           font-weight: 800;
           color: $primary-color;
           background-color:$secondary-color;
@@ -598,7 +600,7 @@ main {
           @if (background-color: $primary-color) {
             color: $secondary-color;
             text-shadow: $background-color 2px 2px 5px;
-            font-size: 35px;
+            font-size: 2.18rem;
             margin-bottom: 15px;
             margin-top: 5px;
             padding: 0;
@@ -648,3 +650,59 @@ footer.d-flex {
   }
 }
 
+@media (max-width: 600px) {
+  body {
+    font-size: 14px; /* Adjust font size for better mobile readability */
+  }
+
+  /* Adjust styles for header */
+  header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #father #mother {
+    width: 100%;
+    margin: 0;
+    flex-direction: column !important;
+  }
+
+  /* Adjust styles for header elements */
+  #oneClick {
+    margin-bottom: 1rem;
+  }
+  
+  .container {
+    text-align: center;
+  }
+
+  /* Adjust styles for offcanvas cart */
+  .offcanvas {
+    width: 100%;
+  }
+
+  /* Adjust styles for main sections */
+  #main {
+    padding: 1rem;
+  }
+
+  .row.d-flex {
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+  }
+
+  /* Adjust styles for individual course cards */
+  .feature {
+    flex-basis: 100%;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  /* Adjust styles for contact form */
+  #formDiv {
+    flex-direction: column;
+    align-items: center;
+  }
+}
