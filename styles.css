@@ -2,7 +2,7 @@
 main div.card {
   width: 80%;
   margin: auto;
-  background-color: #ffde59;
+  background-color: rgba(255, 222, 89, 0.7607843137);
   border: gray 1.3px solid;
   color: #87189d;
   font-size: calc(15px + 10%);
@@ -378,7 +378,7 @@ main div.row.d-flex {
   margin: auto;
   border-radius: 1rem;
   box-shadow: 0px 5px 15px #323437;
-  background-color: #87189d;
+  background-color: rgba(135, 24, 157, 0.7882352941);
   padding: 2rem;
 }
 main div.row.d-flex div.feature {
